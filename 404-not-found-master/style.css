@@ -4,7 +4,6 @@ body {
   display: grid;
   grid-template-rows: 1fr 5fr 0.5fr;
   min-height: 100vh;
-  box-sizing: inherit;
 }
 
 .nav {
@@ -20,7 +19,7 @@ nav {
   display: flex;
   flex-direction: row;
   margin: 5rem;
-  font-size: 3vh;
+  font-size: 13px;
 }
 
 .hero-img {
@@ -28,9 +27,15 @@ nav {
   height: auto;
 }
 
-.text {
-  display: flex;
-  flex-direction: column;
+.text-container {
+  margin: 10em 20px;
+}
+
+.text-container p {
+  font-size: 3vw;
+}
+.text-container h1 {
+  font-size: 4vw;
 }
 .hpLink {
   display: inline-block;
@@ -38,10 +43,17 @@ nav {
   background-color: black;
   padding: 15px 30px;
   text-decoration: none;
-  color: wheat;
+  color: white;
   align-content: center;
+  font-size: 13px;
 }
 
+.hpLink:hover {
+  background-color: white;
+  border: 1px solid gray;
+  color: black;
+  transition: ease-in 0.1s;
+}
 .author {
   justify-self: center;
 }
@@ -105,5 +117,12 @@ nav {
   }
   100% {
     transform: translateY(0);
+  }
+}
+
+/* responsive */
+@media screen and (max-width: 600px) {
+  .body {
+    flex-direction: column;
   }
 }
