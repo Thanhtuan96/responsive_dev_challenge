@@ -1,5 +1,6 @@
 body {
   font-family: 'Poppins', sans-serif;
+  background-color: #fafafa;
 }
 
 ul {
@@ -31,4 +32,100 @@ li {
 
 .welcome-text a {
   color: #f7542e;
+}
+
+.container {
+  position: absolute;
+  margin: 10px 10px;
+
+  background-color: #fafafa;
+}
+
+/* page title part */
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  box-sizing: border-box;
+  margin: 0 auto;
+  max-width: 1140px;
+  pad: 3rem 9rem;
+}
+header .page-title {
+  font-family: PT Serif;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 47px;
+  letter-spacing: -0.045em;
+  text-align: left;
+}
+
+.team-bio {
+  flex-basis: 40%;
+  display: block;
+}
+
+.pt1 {
+  grid-area: pt1;
+}
+.pt2 {
+  grid-area: pt2;
+}
+.pt3 {
+  grid-area: pt3;
+}
+.pt4 {
+  grid-area: pt4;
+}
+.pt5 {
+  grid-area: pt5;
+}
+.pt6 {
+  grid-area: pt6;
+}
+
+.members-show {
+  margin-bottom: 10rem;
+  display: grid;
+  grid-auto-flow: dense;
+  grid-template-areas:
+    'pt1 pt3 pt2'
+    'pt4 pt6 pt5';
+}
+section {
+  margin: 30px 15px 50px 15px;
+  padding: 10px 10px;
+}
+section .member-info-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.member-info-container img {
+  height: 340px;
+  width: 238px;
+}
+
+.member-info {
+  display: flex;
+  flex-direction: row;
+}
+
+.member-charge {
+  writing-mode: vertical-rl;
+}
+
+.member-info-container:nth-of-type(3n) {
+  position: relative;
+  top: 100px;
+}
+
+footer {
+  text-align: center;
+}
+
+footer a {
+  text-decoration: none;
+  color: rgb(2, 108, 247);
 }
