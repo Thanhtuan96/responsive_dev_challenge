@@ -1,6 +1,7 @@
 body {
   font-family: 'Poppins', sans-serif;
   background-color: #fafafa;
+  box-sizing: border-box;
 }
 
 ul {
@@ -35,9 +36,14 @@ li {
 }
 
 .container {
+  height: auto;
+  width: 100%;
   position: absolute;
   margin: 10px 10px;
-
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   background-color: #fafafa;
 }
 
@@ -86,9 +92,10 @@ header .page-title {
 }
 
 .members-show {
+  padding: 10px 10px;
   margin-bottom: 10rem;
   display: grid;
-  grid-auto-flow: dense;
+  grid-template-columns: repeat(3, 30%);
   grid-template-areas:
     'pt1 pt3 pt2'
     'pt4 pt6 pt5';
