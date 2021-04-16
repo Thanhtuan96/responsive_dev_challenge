@@ -1,10 +1,11 @@
 body {
   font-family: 'Poppins', sans-serif;
   background-color: #fafafa;
-  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-ul {
+/* ul {
   padding-left: 24px;
 }
 
@@ -33,7 +34,7 @@ li {
 
 .welcome-text a {
   color: #f7542e;
-}
+} */
 
 .container {
   height: auto;
@@ -55,7 +56,7 @@ header {
   box-sizing: border-box;
   margin: 0 auto;
   max-width: 1140px;
-  pad: 3rem 9rem;
+  padding: 3rem 3rem;
 }
 header .page-title {
   font-family: PT Serif;
@@ -94,8 +95,10 @@ header .page-title {
 .members-show {
   padding: 10px 10px;
   margin-bottom: 10rem;
+  width: 900px;
   display: grid;
   grid-template-columns: repeat(3, 30%);
+  column-gap: 40px;
   grid-template-areas:
     'pt1 pt3 pt2'
     'pt4 pt6 pt5';
@@ -135,4 +138,26 @@ footer {
 footer a {
   text-decoration: none;
   color: rgb(2, 108, 247);
+}
+
+@media (max-width: 1024px) {
+  header {
+    display: flex;
+    flex-direction: column;
+  }
+  .members-show {
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas:
+      'pt1 pt2'
+      'pt3 pt4'
+      'pt5 pt6';
+  }
+
+  .member-info-container:nth-of-type(2n) {
+    position: relative;
+    top: 10px;
+  }
 }
