@@ -40,7 +40,6 @@ li {
   height: auto;
   width: 100%;
   position: absolute;
-  margin: 10px 10px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -95,9 +94,10 @@ header .page-title {
 @media (max-width: 1024px) {
 }
 .members-show {
+  height: auto;
   padding: 10px 10px;
   margin-bottom: 10rem;
-  width: 900px;
+  width: 100%;
   display: grid;
   grid-template-columns: repeat(3, 30%);
   column-gap: 40px;
@@ -106,17 +106,20 @@ header .page-title {
     'pt4 pt6 pt5';
 }
 section {
-  margin: 30px 15px 50px 15px;
+  margin: 15px 15px;
   padding: 10px 10px;
 }
 section .member-info-container {
   display: flex;
   flex-direction: row;
+  margin: 0;
 }
 
 .member-info-container img {
-  height: 20rem;
-  width: 15rem;
+  box-shadow: 6px 6px 9px #80808099;
+  border-radius: 5px;
+  height: auto;
+  width: 100%;
 }
 
 .member-info {
@@ -124,18 +127,27 @@ section .member-info-container {
   flex-direction: row;
 }
 
-.member-charge {
-  writing-mode: vertical-rl;
-  font-weight: 200;
+.member-name {
+  font-size: 0.5em;
+  font-weight: 100;
 }
 
-.member-info-container:nth-of-type(3n) {
-  position: relative;
-  top: 100px;
+.member-charge {
+  writing-mode: vertical-rl;
+  font-weight: 100;
+  margin: 0;
+  font-size: 0.3rem;
+}
+@media (min-width: 600px) {
+  .member-info-container:nth-of-type(3n) {
+    position: relative;
+    top: 100px;
+  }
 }
 
 footer {
-  text-align: center;
+  position: relative;
+  top: 0;
 }
 
 footer a {
@@ -143,13 +155,12 @@ footer a {
   color: rgb(2, 108, 247);
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 600px) {
   header {
     display: flex;
     flex-direction: column;
   }
   .members-show {
-    width: 100%;
     height: auto;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -162,6 +173,6 @@ footer a {
 
   .member-info-container:nth-of-type(2n) {
     position: relative;
-    bottom: 50px;
+    top: 50px;
   }
 }
