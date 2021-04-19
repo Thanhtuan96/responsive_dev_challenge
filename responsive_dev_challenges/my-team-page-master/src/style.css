@@ -94,8 +94,8 @@ header .page-title {
 @media (max-width: 1024px) {
 }
 .members-show {
-  height: auto;
-  padding: 10px 10px;
+  height: 70vh;
+  padding: 20px 20px;
   margin-bottom: 10rem;
   width: 100%;
   display: grid;
@@ -120,6 +120,13 @@ section .member-info-container {
   border-radius: 5px;
   height: auto;
   width: 100%;
+}
+
+.member-info-container:hover {
+  transform: scale(1.05);
+  transition: ease-in 5ms;
+  color: rgba(108, 173, 148, 0.808);
+  text-decoration: dashed underline;
 }
 
 .member-info {
