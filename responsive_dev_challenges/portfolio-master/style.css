@@ -1,0 +1,27 @@
+body {
+  display: flex;
+  flex-direction: row;
+  font-family: 'Poppins', sans-serif;
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  flex-basis: auto;
+  align-items: center;
+  justify-content: center;
+}
+
+.info-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.personal p {
+  margin: 0%;
+}
+
+.personal span {
+  color: gray;
+  font-size: 10px;
+}
