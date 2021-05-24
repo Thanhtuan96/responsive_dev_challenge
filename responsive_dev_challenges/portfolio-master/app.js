@@ -45,7 +45,7 @@ window.addEventListener('DOMContentLoaded', () => {
                 <p class='hobbies-name'>${item.name}</p>
             </div>
             </div>
-            <p class='description'>${item.description}</p>
+            <p class='hobbie-description'>${item.description}</p>
         </div>`;
     })
     .join('');
