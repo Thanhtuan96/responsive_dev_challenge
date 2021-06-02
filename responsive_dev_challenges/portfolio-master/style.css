@@ -298,4 +298,29 @@ progress {
   .job-experience {
     flex-direction: column;
   }
+
+  .favorite-techs {
+    grid-template-columns: 1fr;
+  }
+}
+
+.favorite-techs {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.tech-tag {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.tech-tag img {
+  width: 20%;
+  height: 20%;
+}
+
+.favorite-tech span {
+  display: block;
 }
