@@ -1,5 +1,4 @@
 body {
-  overflow: hidden;
   position: relative;
   margin: 2rem;
   padding: 15px;
@@ -7,6 +6,7 @@ body {
   box-sizing: border-box;
 }
 .blob1 {
+  overflow: hidden;
   display: inline;
   position: absolute;
   width: 40%;
@@ -17,11 +17,12 @@ body {
 }
 
 .blob2 {
+  overflow: hidden;
   display: inline;
   position: absolute;
-  width: 100%;
+  width: 50%;
   height: 60%;
-  right: -30em;
+  right: 30em;
   top: -15em;
   z-index: -999;
   animation: move 10s ease-in-out infinite;
@@ -266,7 +267,6 @@ progress {
 
 @media (max-width: 800px) {
   body {
-    overflow: hidden;
     margin: 5px;
   }
 
@@ -290,7 +290,6 @@ progress {
   }
   .page-body {
     flex-direction: column;
-    margin: 0;
   }
 
   .skill-container {
