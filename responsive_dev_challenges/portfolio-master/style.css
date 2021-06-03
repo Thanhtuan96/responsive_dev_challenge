@@ -264,8 +264,33 @@ progress {
 .job-content {
   margin-left: 15px;
 }
+.favorite-techs {
+  margin-top: 20px;
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+.tech-tag {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 20px;
+  background: #d6d6d6;
+  box-shadow: 20px 20px 60px #b6b6b6, -20px -20px 60px #f6f6f6;
+  padding: 20px;
+}
 
-@media (max-width: 800px) {
+.tech-tag img {
+  width: 20%;
+  height: 20%;
+}
+
+.favorite-tech span {
+  display: block;
+}
+
+@media (max-width: 600px) {
   body {
     margin: 5px;
   }
@@ -302,25 +327,9 @@ progress {
   .favorite-techs {
     grid-template-columns: 1fr;
   }
-}
-
-.favorite-techs {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-}
-
-.tech-tag {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-
-.tech-tag img {
-  width: 20%;
-  height: 20%;
-}
-
-.favorite-tech span {
-  display: block;
+  .tech-tag {
+    text-align: center;
+    flex-direction: column;
+    justify-content: center;
+  }
 }
