@@ -1,0 +1,89 @@
+body {
+  padding: 0;
+  background-color: #000000db;
+  color: white;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  margin: 1em;
+}
+.btn-toggle {
+  display: none;
+}
+
+nav {
+  display: grid;
+  grid-template-columns: 3fr 7fr;
+}
+
+nav .logo {
+  width: 120px;
+  padding: 5px;
+  border: 1px solid white;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  list-style: none;
+}
+
+.menu a {
+  font-size: 1.1em;
+  color: white;
+  text-decoration: none;
+}
+
+.main-carossel {
+  margin-top: 4rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: centercd ..;
+}
+.description {
+  flex-basis: 300px;
+  margin-right: 40px;
+}
+
+.example-img {
+  flex-basis: 700px;
+}
+
+.example-img img {
+  width: 100%;
+  height: auto;
+}
+
+.designer-tag {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  height: auto;
+  background-color: #00000090;
+  padding: 15px;
+  position: relative;
+  right: -45px;
+  top: -30px;
+}
+
+.tag-name {
+  display: flex;
+  margin-bottom: 25px;
+}
+
+.tag-name img {
+  width: 65px;
+  height: 65px;
+  margin-right: 10px;
+  border-radius: 50px;
+}
+
+.tag-name h1,
+p {
+  margin: 0;
+  margin-bottom: 5px;
+}
