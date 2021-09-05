@@ -1,0 +1,13 @@
+include ./commons/Header
+
+body 
+    include ./commons/carousel
+    .container-fluid
+        .row(data-masonry='{"percentPosition": true }')
+            each user in data   
+                .bg-light.text-white.col-12.col-md-6.col-lg-4.m-0.p-0
+                    img.card-img(src= user.urls.regular, alt='...')
+                    .card-img-overlay
+                        h5.card-title= user.user.name
+                        p.card-text= user.alt_description
+                        p.card-text= 'Updated at' 
