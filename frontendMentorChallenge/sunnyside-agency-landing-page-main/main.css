@@ -1,0 +1,195 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@100&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:wght@700;900&display=swap");
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 18px;
+  font-family: 'Barlow';
+  font-weight: 800px;
+  width: 100%;
+}
+
+header {
+  background: url("/images/desktop/image-header.jpg") no-repeat;
+  background-size: center center;
+  height: 70vh;
+  width: 100%;
+}
+
+header nav {
+  padding: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header nav .nav-logo img {
+  margin-left: 15px;
+}
+
+header nav .links ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 400px;
+  padding: 0;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header nav .links ul li {
+  display: inline;
+}
+
+header nav .links ul li a {
+  text-decoration: none;
+  color: white;
+}
+
+header nav .links ul .active {
+  padding: 10px 15px;
+  background-color: whitesmoke;
+  border-radius: 15px;
+}
+
+header nav .links ul .active a {
+  color: black;
+}
+
+header .hero {
+  height: 70%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header .hero h1 {
+  font-size: 4em;
+  color: white;
+}
+
+.body {
+  margin: 0;
+  width: 100%;
+}
+
+.body .article-card {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  padding: 0;
+  margin: 0;
+}
+
+.body .article-card .article-img-container {
+  width: 50%;
+  margin: 0;
+  padding: 0;
+}
+
+.body .article-card .article-img-container img {
+  height: 100%;
+  width: 100%;
+}
+
+.body .article-card .article-content {
+  margin: 0;
+  width: 50%;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 0px 70px;
+}
+
+.body .card-2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+}
+
+.body .article-feature-container:nth-child(2n + 1) {
+  background: url("/images/desktop/image-graphic-design.jpg");
+  background-size: cover;
+  height: auto;
+  min-height: 400px;
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.body .article-feature-container:nth-child(2n + 1) .card-content {
+  padding: 0px 60px;
+}
+
+.body .article-feature-container {
+  background: url("/images/desktop/image-photography.jpg");
+  background-size: cover;
+  height: auto;
+  min-height: 400px;
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.body .article-feature-container .card-content {
+  padding: 0px 60px;
+  margin-bottom: 30px;
+}
+/*# sourceMappingURL=main.css.map */

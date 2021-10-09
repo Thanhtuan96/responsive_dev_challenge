@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@700;900&display=swap');
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    padding: 0;
+    font-size: 18px;
+    font-family: 'Barlow';
+    font-weight: 800px;
+    width: 100%;
+}
+
+header {
+    background: url('/images/desktop/image-header.jpg') no-repeat;
+    background-size: center center;
+    height: 70vh;
+    width: 100%;
+    nav {
+        padding: 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .nav-logo {
+            img {
+                margin-left: 15px;
+            }
+        }
+        .links {
+            ul {
+                display: flex;
+                width: 400px;
+                padding: 0;
+                justify-content: space-evenly;
+                align-items: center;
+
+                li {
+                    display: inline;
+                    a {
+                        text-decoration: none;
+                        color: white;
+                    }
+                }
+                .active {
+                    padding: 10px 15px;
+                    background-color: whitesmoke;
+                    border-radius: 15px;
+
+                    a {
+                        color: black;
+                    }
+                }
+            }
+        }
+    }
+
+    .hero {
+        height: 70%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        h1 {
+            font-size: 4em;
+            color: white;
+        }
+    }
+}
+
+.body {
+    margin: 0;
+    width: 100%;
+
+    .article-card {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        padding: 0;
+        margin: 0;
+        .article-img-container {
+            width: 50%;
+            margin: 0;
+            padding: 0;
+            img {
+                height: 100%;
+                width: 100%;
+            }
+        }
+        .article-content {
+            margin: 0;
+            width: 50%;
+            height: auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 0px 70px;
+        }
+    }
+    .card-2 {
+        display: flex;
+        flex-direction: row-reverse;
+    }
+
+    .article-feature-container:nth-child(2n + 1) {
+        background: url('/images/desktop/image-graphic-design.jpg');
+        background-size: cover;
+        height: auto;
+        min-height: 400px;
+        width: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        .card-content {
+            padding: 0px 60px;
+        }
+    }
+
+    .article-feature-container {
+        background: url('/images/desktop/image-photography.jpg');
+        background-size: cover;
+        height: auto;
+        min-height: 400px;
+        width: 50%;
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        align-items: flex-end;
+        .card-content {
+            padding: 0px 60px;
+            margin-bottom: 30px;
+        }
+    }
+}
