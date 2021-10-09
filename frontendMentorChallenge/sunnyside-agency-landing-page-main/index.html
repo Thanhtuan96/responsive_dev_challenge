@@ -12,6 +12,14 @@
             href="./images/favicon-32x32.png"
         />
         <link rel="stylesheet" href="./main.css" />
+        <script
+            type="module"
+            src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+        ></script>
+        <script
+            nomodule
+            src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+        ></script>
 
         <title>Frontend Mentor | Sunnyside agency landing page</title>
 
@@ -57,45 +65,48 @@
             </div>
         </header>
         <div class="body">
-            <article class="article-card card-1">
-                <div class="article-content">
-                    <h1>Transfrom your brand</h1>
-                    <p>
-                        We are a full-service creative agency specializing in
-                        helping brands grow fast. Engage your clients through
-                        compelling visuals that do most of the marketing for
-                        you.
-                    </p>
-                    <a href="/">LEARN MORE</a>
-                </div>
-                <div class="article-img-container">
-                    <img
-                        src="./images/desktop/image-transform.jpg"
-                        alt=""
-                        class="article-image"
-                    />
-                </div>
-            </article>
-            <article class="article-card card-2">
-                <div class="article-content">
-                    <h1>Stand out to the right audience</h1>
-                    <p>
-                        Using a collaborative formula of designers, researchers,
-                        photographers, videographers, and copywriters, we’ll
-                        build and extend your brand in digital places.
-                    </p>
-                    <a href="/">LEARN MORE</a>
-                </div>
-                <div class="article-img-container">
-                    <img
-                        src="./images/desktop/image-stand-out.jpg"
-                        alt=""
-                        class="article-image"
-                    />
-                </div>
-            </article>
+            <div class="branding">
+                <article class="article-card card-1">
+                    <div class="article-content">
+                        <h1>Transfrom your brand</h1>
+                        <p>
+                            We are a full-service creative agency specializing
+                            in helping brands grow fast. Engage your clients
+                            through compelling visuals that do most of the
+                            marketing for you.
+                        </p>
+                        <a href="/">LEARN MORE</a>
+                    </div>
+                    <div class="article-img-container">
+                        <img
+                            src="./images/desktop/image-transform.jpg"
+                            alt=""
+                            class="article-image"
+                        />
+                    </div>
+                </article>
+                <article class="article-card card-2">
+                    <div class="article-content">
+                        <h1>Stand out to the right audience</h1>
+                        <p>
+                            Using a collaborative formula of designers,
+                            researchers, photographers, videographers, and
+                            copywriters, we’ll build and extend your brand in
+                            digital places.
+                        </p>
+                        <a href="/">LEARN MORE</a>
+                    </div>
+                    <div class="article-img-container">
+                        <img
+                            src="./images/desktop/image-stand-out.jpg"
+                            alt=""
+                            class="article-image"
+                        />
+                    </div>
+                </article>
+            </div>
             <article class="article-card">
-                <div class="article-feature-container">
+                <div class="article-feature-container graphic-design">
                     <div class="card-content">
                         <h1>Graphic Design</h1>
                         <p>
@@ -105,7 +116,7 @@
                         </p>
                     </div>
                 </div>
-                <div class="article-feature-container">
+                <div class="article-feature-container photography">
                     <div class="card-content">
                         <h1>Photography</h1>
                         <p>
@@ -116,24 +127,79 @@
                     </div>
                 </div>
             </article>
+            <div class="customer-voice">
+                <h1>Client testimonials</h1>
+                <div class="client-voices">
+                    <div class="client-voice-card">
+                        <img src="./images/image-emily.jpg" alt="emily" />
+                        <p>
+                            We put our trust in Sunnyside and they delivered,
+                            making sure our needs were met and deadlines were
+                            always hit.
+                        </p>
+                        <h2>Emily R.</h2>
+                        <span>Makerting Director</span>
+                    </div>
+                    <div class="client-voice-card">
+                        <img src="./images/image-emily.jpg" alt="emily" />
+                        <p>
+                            Marketing Director Sunnyside’s enthusiasm coupled
+                            with their keen interest in our brand’s success made
+                            it a satisfying and enjoyable experience.
+                        </p>
+                        <h2>Thomas S.</h2>
+                        <span>Chief Operating Officer</span>
+                    </div>
+                    <div class="client-voice-card">
+                        <img src="./images/image-emily.jpg" alt="emily" />
+                        <p>
+                            Incredible end result! Our sales increased over 400%
+                            when we worked with Sunnyside. Highly recommended!
+                        </p>
+                        <h2>Jennie F.</h2>
+                        <span
+                            >Business Owner About Services Projects
+                            Contact</span
+                        >
+                    </div>
+                </div>
+            </div>
+            <div class="showcases">
+                <img
+                    src="./images/desktop/image-gallery-milkbottles.jpg"
+                    alt=""
+                /><img
+                    src="./images/desktop/image-gallery-orange.jpg"
+                    alt=""
+                /><img
+                    src="./images/desktop/image-gallery-cone.jpg"
+                    alt=""
+                /><img
+                    src="./images/desktop/image-gallery-sugarcubes.jpg"
+                    alt=""
+                />
+            </div>
         </div>
-
-        About Services Projects Contact We are creatives S Learn more Graphic
-        design Client testimonials We put our trust in Sunnyside and they
-        delivered, making sure our needs were met and deadlines were always hit.
-        Emily R. Marketing Director Sunnyside’s enthusiasm coupled with their
-        keen interest in our brand’s success made it a satisfying and enjoyable
-        experience. Thomas S. Chief Operating Officer Incredible end result! Our
-        sales increased over 400% when we worked with Sunnyside. Highly
-        recommended! Jennie F. Business Owner About Services Projects Contact
-
+        <footer>
+            <h1>Sunnyside</h1>
+            <div class="links">
+                <a href="/about">About</a><a href="/service">Services</a
+                ><a href="/projects">Projects</a>
+            </div>
+            <div class="social-links">
+                <a href="/"><ion-icon name="logo-facebook"></ion-icon></a>
+                <a href="/"><ion-icon name="logo-instagram"></ion-icon></a>
+                <a href="/"><ion-icon name="logo-twitter"></ion-icon></a>
+                <a href="/"><ion-icon name="logo-github"></ion-icon></a>
+            </div>
+        </footer>
         <div class="attribution">
             Challenge by
             <a
                 href="https://www.frontendmentor.io?ref=challenge"
                 target="_blank"
                 >Frontend Mentor</a
-            >. Coded by <a href="#">Your Name Here</a>.
+            >. Coded by <a href="#">Tuan Thanh</a>.
         </div>
     </body>
 </html>
