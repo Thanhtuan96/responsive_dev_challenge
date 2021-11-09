@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en" data-theme='dark'>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- displays site properly based on user's device -->
+
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="./images/favicon-32x32.png"
+        />
+        <link rel="stylesheet" href="./style.css">
+
+        <title>Frontend Mentor | Todo app</title>
+
+        <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+        <style>
+            .attribution {
+                font-size: 11px;
+                text-align: center;
+            }
+            .attribution a {
+                color: hsl(228, 45%, 44%);
+            }
+        </style>
+    </head>
+    <body class="light-theme">
+        <header>
+          <div class="header-content">
+            <div class="header-name">Todo</div>
+            <button class="btn-theme"></button>
+            <input type="text" class="todo-input todo-block" placeholder="Create a new todo..." />
+          </div>
+            
+        </header>
+        <main>
+            <section class="todo-list">
+                <div class="tasks-empty todo-block" >your tasks list is empty</div>
+                <div class="todo-container">
+                  <div class="todo-block">todo 1</div>
+                  <div class="todo-block">todo 1</div>
+                  <div class="todo-block">todo 1</div>
+                  <div class="todo-block">todo 1</div>
+                </div>
+            </section>
+            <section class="desktop-panel">
+                <div class="todo-block">
+                    <p><span>1</span>items left</p>
+                    <button class="options btn-all">All</button>
+                    <button class="options btn-active">Active</button>
+                    <button class="options btn-complete">Completed</button>
+                    <p>Clear Completed</p]>
+                </div>
+            </section>
+            <section class="mobile-panel">
+                <div class="todo-block">
+                  <div class="todo-status">
+                    <p><span>1</span>items left</p>
+                    <p>Clear Completed</p>
+                  </div>
+                    <button class="options btn-all">All</button>
+                    <button class="options btn-active">Active</button>
+                    <button class="options btn-complete">Completed</button>
+                </div>
+            </section>
+            <div>Drag and drop to reorder
+        list</div>
+        </main>
+
+        <!-- Add dynamic number -->
+        
+
+        <div class="attribution">
+            Challenge by
+            <a
+                href="https://www.frontendmentor.io?ref=challenge"
+                target="_blank"
+                >Frontend Mentor</a
+            >. Coded by <a href="#">Your Name Here</a>.
+        </div>
+    </body>
+</html>

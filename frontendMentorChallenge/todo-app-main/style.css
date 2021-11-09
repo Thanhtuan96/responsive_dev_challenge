@@ -1,0 +1,115 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@500&display=swap");
+html[data-theme=dark] {
+  --bg-top-desktop-img: url("./images/bg-desktop-dark.jpg");
+  --bg-color: hsl(235, 21%, 11%);
+  --bg-todo-line-color: hsl(235, 24%, 19%);
+  --btn-bg-img: url("./images/icon-sun.svg");
+  --text-color: white;
+}
+
+html[data-theme=light] {
+  --bg-color: blue;
+  --text-color: black;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  --light-bg: red;
+}
+
+body {
+  background-image: var(--bg-top-desktop-img);
+  background-size: 100% 350px;
+  background-repeat: no-repeat;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+header {
+  width: 100%;
+  height: fit-content;
+  margin: 50px 0 30px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+header .header-content {
+  display: flex;
+  justify-content: space-between;
+  width: 85%;
+  max-width: 600px;
+  flex-wrap: wrap;
+}
+header .header-content .header-name {
+  text-transform: uppercase;
+  font-size: 30px;
+  letter-spacing: 10px;
+  font-weight: bold;
+  color: white;
+}
+header .header-content button {
+  width: 30px;
+  height: 30px;
+  border: none;
+  background: var(--btn-bg-img);
+  background-repeat: no-repeat;
+}
+header .header-content input {
+  width: 100%;
+  background-color: var(--bg-todo-line-color);
+  border: none;
+  padding: 20px 20px;
+  margin-top: 2em;
+  border-radius: 10px;
+  color: var(--text-color);
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+main .todo-list {
+  width: 100%;
+  max-width: 600px;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+main .todo-list .todo-block {
+  background-color: var(--bg-todo-line-color);
+  width: 100%;
+  display: flex;
+  padding: 15px 10px;
+  overflow: hidden;
+  border-radius: 10px;
+}
+main .todo-list .todo-container {
+  background-color: var(--bg-todo-line-color);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px 10px;
+  border-radius: 10px;
+  box-shadow: 1px 1px gray;
+}
+main .todo-list .todo-container .todo-block {
+  background-color: var(--bg-todo-line-color);
+  width: 100%;
+  display: flex;
+  padding: 15px 10px;
+  border-bottom: 1px solid white;
+}
+
+/*# sourceMappingURL=style.css.map */
