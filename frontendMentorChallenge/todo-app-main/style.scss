@@ -6,6 +6,8 @@ html[data-theme='dark'] {
     --bg-todo-line-color: hsl(235, 24%, 19%);
     --btn-bg-img: url('./images/icon-sun.svg');
     --text-color: white;
+    --btn-text-color: hsl(234, 11%, 52%);
+    --btn-active-text-color: rgb(16, 127, 253);
 }
 html[data-theme='light'] {
     --bg-color: blue;
@@ -19,7 +21,10 @@ html[data-theme='light'] {
     font-family: 'Josefin Sans', sans-serif;
     font-size: 18px;
     font-weight: 600;
-    --light-bg: red;
+}
+
+html {
+    height: 100vh;
 }
 body {
     background-image: var(--bg-top-desktop-img);
@@ -27,6 +32,11 @@ body {
     background-repeat: no-repeat;
     background-color: var(--bg-color);
     color: var(--text-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
 }
 
 header {
@@ -71,20 +81,26 @@ header {
 }
 
 main {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
+    border-radius: 10px;
+    overflow: hidden;
+    margin: auto;
+    margin-top: 0;
+    width: 85%;
+    max-width: 600px;
+    .todo-block {
+        background-color: var(--bg-todo-line-color);
+        width: 100%;
+        display: flex;
+        padding: 15px 10px;
+        overflow: hidden;
+    }
     .todo-list {
+        margin: 0;
         width: 100%;
         max-width: 600px;
         height: fit-content;
         display: flex;
         flex-direction: column;
-        gap: 20px;
-        border-radius: 10px;
         overflow: hidden;
         .todo-block {
             background-color: var(--bg-todo-line-color);
@@ -92,24 +108,124 @@ main {
             display: flex;
             padding: 15px 10px;
             overflow: hidden;
-            border-radius: 10px;
         }
-
         .todo-container {
             background-color: var(--bg-todo-line-color);
             display: flex;
             flex-direction: column;
             gap: 20px;
-            padding: 20px 10px;
-            border-radius: 10px;
             box-shadow: 1px 1px gray;
             .todo-block {
                 background-color: var(--bg-todo-line-color);
                 width: 100%;
                 display: flex;
                 padding: 15px 10px;
-                border-bottom: 1px solid white;
+                border-bottom: 0.5px solid rgba(255, 255, 255, 0.26);
+                position: relative;
+                line-height: 24px;
+            }
+            .todo-line {
+                display: flex;
+                align-items: center;
+                position: relative;
+                p {
+                    margin-left: 15px;
+                    text-align: left;
+                }
+                button {
+                    position: absolute;
+                    right: 10px;
+                    border: none;
+                }
+                .check-complete {
+                    appearance: none;
+                    -webkit-appearance: none;
+                    -ms-appearance: none;
+                    -o-appearance: none;
+                    -moz-appearance: none;
+                    margin-right: 2rem;
+                }
+                .check-complete::before {
+                    content: '';
+                    display: inline-block;
+                    border-radius: 50%;
+                    outline: none;
+                    cursor: pointer;
+                    height: 20px;
+                    width: 20px;
+                    border: 1px solid gray;
+                    position: absolute;
+                    top: 15px;
+                    left: 15px;
+                }
+
+                .check-complete::after {
+                    content: '';
+                    display: inline-block;
+                    border-radius: 50%;
+                    outline: none;
+                    cursor: pointer;
+                    height: 20px;
+                    width: 20px;
+                    border: none;
+                    position: absolute;
+                    top: 15px;
+                    left: 15px;
+                    border: 1px solid gray;
+                }
             }
         }
+    }
+    .todo-option {
+        border-radius: 0 0 10px 10px;
+    }
+    .desktop-panel {
+        // display: none;
+        .todo-option {
+            display: flex;
+            justify-content: space-between;
+            color: var(--btn-text-color);
+            button {
+                background: transparent;
+                border: none;
+                color: var(--btn-text-color);
+            }
+            .active {
+                color: var(--btn-active-text-color);
+            }
+        }
+    }
+
+    .mobile-panel {
+        display: none;
+        .todo-option {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            color: var(--btn-text-color);
+            .todos-status {
+                display: flex;
+                justify-content: space-between;
+                border-radius: 0 0 10px 10px;
+            }
+            .status-container {
+                margin-top: 2rem;
+                display: flex;
+                justify-content: center;
+                gap: 20px;
+                border-radius: 10px;
+                button {
+                    background: transparent;
+                    border: none;
+                    color: var(--btn-text-color);
+                }
+            }
+        }
+    }
+
+    .instruction {
+        text-align: center;
+        color: var(--btn-text-color);
+        margin: 75px auto;
     }
 }

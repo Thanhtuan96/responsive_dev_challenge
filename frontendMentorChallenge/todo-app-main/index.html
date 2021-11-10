@@ -37,35 +37,38 @@
         </header>
         <main>
             <section class="todo-list">
-                <div class="tasks-empty todo-block" >your tasks list is empty</div>
+                <div class="tasks-empty todo-block">your tasks list is empty</div>
                 <div class="todo-container">
-                  <div class="todo-block">todo 1</div>
-                  <div class="todo-block">todo 1</div>
-                  <div class="todo-block">todo 1</div>
-                  <div class="todo-block">todo 1</div>
+                  <div class="todo-block todo-line">
+                    <input type="checkbox" class="check-complete">
+                    <p>dasfasdf</p>
+                    <button style="background:url('./images/icon-cross.svg') no-repeat; width: 20px; height: 20px; display: inline;" ></button>
+                  </div>
                 </div>
             </section>
             <section class="desktop-panel">
-                <div class="todo-block">
-                    <p><span>1</span>items left</p>
-                    <button class="options btn-all">All</button>
+                <div class="todo-block todo-option">
+                    <p><span class="count">1</span>items left</p>
+                    <button class="options btn-all active">All</button>
                     <button class="options btn-active">Active</button>
                     <button class="options btn-complete">Completed</button>
                     <p>Clear Completed</p]>
                 </div>
             </section>
             <section class="mobile-panel">
-                <div class="todo-block">
-                  <div class="todo-status">
-                    <p><span>1</span>items left</p>
+                <div class="todo-option">
+                  <div class="todo-block todos-status">
+                    <p><span class="count">1</span>items left</p>
                     <p>Clear Completed</p>
                   </div>
+                  <div class="todo-block status-container">
                     <button class="options btn-all">All</button>
                     <button class="options btn-active">Active</button>
                     <button class="options btn-complete">Completed</button>
+                  </div>
                 </div>
             </section>
-            <div>Drag and drop to reorder
+            <div class="instruction">Drag and drop to reorder
         list</div>
         </main>
 
@@ -78,7 +81,7 @@
                 href="https://www.frontendmentor.io?ref=challenge"
                 target="_blank"
                 >Frontend Mentor</a
-            >. Coded by <a href="#">Your Name Here</a>.
+            >. Coded by <a href="#">Tuan Thanh</a>.
         </div>
     </body>
 </html>

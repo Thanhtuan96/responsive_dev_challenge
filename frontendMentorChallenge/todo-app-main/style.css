@@ -5,6 +5,8 @@ html[data-theme=dark] {
   --bg-todo-line-color: hsl(235, 24%, 19%);
   --btn-bg-img: url("./images/icon-sun.svg");
   --text-color: white;
+  --btn-text-color: hsl(234, 11%, 52%);
+  --btn-active-text-color: rgb(16, 127, 253);
 }
 
 html[data-theme=light] {
@@ -19,7 +21,10 @@ html[data-theme=light] {
   font-family: "Josefin Sans", sans-serif;
   font-size: 18px;
   font-weight: 600;
-  --light-bg: red;
+}
+
+html {
+  height: 100vh;
 }
 
 body {
@@ -28,6 +33,11 @@ body {
   background-repeat: no-repeat;
   background-color: var(--bg-color);
   color: var(--text-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
 header {
@@ -71,20 +81,27 @@ header .header-content input {
 }
 
 main {
+  border-radius: 10px;
+  overflow: hidden;
+  margin: auto;
+  margin-top: 0;
+  width: 85%;
+  max-width: 600px;
+}
+main .todo-block {
+  background-color: var(--bg-todo-line-color);
+  width: 100%;
   display: flex;
-  justify-content: center;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  padding: 15px 10px;
+  overflow: hidden;
 }
 main .todo-list {
+  margin: 0;
   width: 100%;
   max-width: 600px;
   height: fit-content;
   display: flex;
   flex-direction: column;
-  gap: 20px;
-  border-radius: 10px;
   overflow: hidden;
 }
 main .todo-list .todo-block {
@@ -93,15 +110,12 @@ main .todo-list .todo-block {
   display: flex;
   padding: 15px 10px;
   overflow: hidden;
-  border-radius: 10px;
 }
 main .todo-list .todo-container {
   background-color: var(--bg-todo-line-color);
   display: flex;
   flex-direction: column;
   gap: 20px;
-  padding: 20px 10px;
-  border-radius: 10px;
   box-shadow: 1px 1px gray;
 }
 main .todo-list .todo-container .todo-block {
@@ -109,7 +123,105 @@ main .todo-list .todo-container .todo-block {
   width: 100%;
   display: flex;
   padding: 15px 10px;
-  border-bottom: 1px solid white;
+  border-bottom: 0.5px solid rgba(255, 255, 255, 0.26);
+  position: relative;
+  line-height: 24px;
+}
+main .todo-list .todo-container .todo-line {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+main .todo-list .todo-container .todo-line p {
+  margin-left: 15px;
+  text-align: left;
+}
+main .todo-list .todo-container .todo-line button {
+  position: absolute;
+  right: 10px;
+  border: none;
+}
+main .todo-list .todo-container .todo-line .check-complete {
+  appearance: none;
+  -webkit-appearance: none;
+  -ms-appearance: none;
+  -o-appearance: none;
+  -moz-appearance: none;
+  margin-right: 2rem;
+}
+main .todo-list .todo-container .todo-line .check-complete::before {
+  content: "";
+  display: inline-block;
+  border-radius: 50%;
+  outline: none;
+  cursor: pointer;
+  height: 20px;
+  width: 20px;
+  border: 1px solid gray;
+  position: absolute;
+  top: 15px;
+  left: 15px;
+}
+main .todo-list .todo-container .todo-line .check-complete::after {
+  content: "";
+  display: inline-block;
+  border-radius: 50%;
+  outline: none;
+  cursor: pointer;
+  height: 20px;
+  width: 20px;
+  border: none;
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  border: 1px solid gray;
+}
+main .todo-option {
+  border-radius: 0 0 10px 10px;
+}
+main .desktop-panel .todo-option {
+  display: flex;
+  justify-content: space-between;
+  color: var(--btn-text-color);
+}
+main .desktop-panel .todo-option button {
+  background: transparent;
+  border: none;
+  color: var(--btn-text-color);
+}
+main .desktop-panel .todo-option .active {
+  color: var(--btn-active-text-color);
+}
+main .mobile-panel {
+  display: none;
+}
+main .mobile-panel .todo-option {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: var(--btn-text-color);
+}
+main .mobile-panel .todo-option .todos-status {
+  display: flex;
+  justify-content: space-between;
+  border-radius: 0 0 10px 10px;
+}
+main .mobile-panel .todo-option .status-container {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  border-radius: 10px;
+}
+main .mobile-panel .todo-option .status-container button {
+  background: transparent;
+  border: none;
+  color: var(--btn-text-color);
+}
+main .instruction {
+  text-align: center;
+  color: var(--btn-text-color);
+  margin: 75px auto;
 }
 
 /*# sourceMappingURL=style.css.map */
