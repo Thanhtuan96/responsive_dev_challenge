@@ -8,10 +8,17 @@ html[data-theme='dark'] {
     --text-color: white;
     --btn-text-color: hsl(234, 11%, 52%);
     --btn-active-text-color: rgb(16, 127, 253);
+    --todo-block-border-bottom: 0.5px solid rgba(218, 218, 218, 0.157);
 }
 html[data-theme='light'] {
-    --bg-color: blue;
-    --text-color: black;
+    --bg-top-desktop-img: url('./images/bg-desktop-light.jpg');
+    --bg-color: hsl(236, 33%, 92%);
+    --bg-todo-line-color: hsl(0, 0%, 98%);
+    --btn-bg-img: url('./images/icon-moon.svg');
+    --text-color: rgba(0, 0, 0, 0.698);
+    --btn-text-color: hsl(234, 11%, 52%);
+    --btn-active-text-color: rgb(16, 127, 253);
+    --todo-block-border-bottom: 0.5px solid rgba(82, 78, 78, 0.103);
 }
 
 * {
@@ -37,12 +44,13 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
+    user-select: none;
 }
 
 header {
     width: 100%;
     height: fit-content;
-    margin: 50px 0 30px 0;
+    margin: 80px 0 30px 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -67,6 +75,7 @@ header {
             border: none;
             background: var(--btn-bg-img);
             background-repeat: no-repeat;
+            cursor: pointer;
         }
         input {
             width: 100%;
@@ -76,6 +85,10 @@ header {
             margin-top: 2em;
             border-radius: 10px;
             color: var(--text-color);
+        }
+
+        input:focus {
+            outline: none;
         }
     }
 }
@@ -109,20 +122,30 @@ main {
             padding: 15px 10px;
             overflow: hidden;
         }
+        .tasks-empty {
+            display: none;
+        }
         .todo-container {
             background-color: var(--bg-todo-line-color);
             display: flex;
             flex-direction: column;
-            gap: 20px;
+            gap: 5px;
             box-shadow: 1px 1px gray;
             .todo-block {
                 background-color: var(--bg-todo-line-color);
                 width: 100%;
                 display: flex;
                 padding: 15px 10px;
-                border-bottom: 0.5px solid rgba(255, 255, 255, 0.26);
+                border-bottom: var(--todo-block-border-bottom);
                 position: relative;
                 line-height: 24px;
+                .delete-btn {
+                    background: url('./images/icon-cross.svg') no-repeat;
+                    width: 20px;
+                    height: 20px;
+                    display: inline;
+                    cursor: pointer;
+                }
             }
             .todo-line {
                 display: flex;
@@ -180,11 +203,13 @@ main {
         border-radius: 0 0 10px 10px;
     }
     .desktop-panel {
-        // display: none;
+        display: none;
+        font-weight: 200;
         .todo-option {
             display: flex;
             justify-content: space-between;
             color: var(--btn-text-color);
+            padding: 20px 20px;
             button {
                 background: transparent;
                 border: none;
