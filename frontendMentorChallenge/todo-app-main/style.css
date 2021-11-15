@@ -45,6 +45,7 @@ body {
   justify-content: center;
   align-items: center;
   user-select: none;
+  transition: display 0.5s ease-in-out;
 }
 
 header {
@@ -124,6 +125,8 @@ main .todo-list .todo-block {
 }
 main .todo-list .tasks-empty {
   display: none;
+  padding: 25px 20px;
+  text-align: center;
 }
 main .todo-list .todo-container {
   background-color: var(--bg-todo-line-color);
@@ -147,6 +150,10 @@ main .todo-list .todo-container .todo-block .delete-btn {
   height: 20px;
   display: inline;
   cursor: pointer;
+}
+main .todo-list .todo-container .completed {
+  text-decoration: line-through;
+  opacity: 0.7;
 }
 main .todo-list .todo-container .todo-line {
   display: flex;
@@ -248,6 +255,12 @@ main .instruction {
   text-align: center;
   color: var(--btn-text-color);
   margin: 75px auto;
+}
+
+.attribution {
+  position: absolute;
+  bottom: 0;
+  font-size: 0.5em;
 }
 
 /*# sourceMappingURL=style.css.map */

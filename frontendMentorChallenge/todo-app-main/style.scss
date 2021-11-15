@@ -43,8 +43,8 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
     user-select: none;
+    transition: display 0.5s ease-in-out;
 }
 
 header {
@@ -124,6 +124,8 @@ main {
         }
         .tasks-empty {
             display: none;
+            padding: 25px 20px;
+            text-align: center;
         }
         .todo-container {
             background-color: var(--bg-todo-line-color);
@@ -146,6 +148,10 @@ main {
                     display: inline;
                     cursor: pointer;
                 }
+            }
+            .completed {
+                text-decoration: line-through;
+                opacity: 0.7;
             }
             .todo-line {
                 display: flex;
@@ -253,4 +259,10 @@ main {
         color: var(--btn-text-color);
         margin: 75px auto;
     }
+}
+
+.attribution {
+    position: absolute;
+    bottom: 0;
+    font-size: 0.5em;
 }
