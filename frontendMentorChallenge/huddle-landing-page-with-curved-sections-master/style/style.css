@@ -1,0 +1,39 @@
+:root {
+  --primary-pink: hsl(322, 100%, 66%);
+  --primary-light-pink: hsl(321, 100%, 78%);
+  --primary-light-red: hsl(0, 100%, 63%);
+  --neutral-very-dark-cyan: hsl(192, 100%, 9%);
+  --neutral-very-pale-blue: hsl(207, 100%, 98%);
+}
+
+body .concept-section:nth-child(2n + 1) {
+  position: relative;
+}
+
+body .concept-section:nth-child(2n + 1) .concept-content {
+  height: 300px;
+  background-color: var(--neutral-very-pale-blue);
+  width: 100%;
+}
+
+body .concept-section:nth-child(2n + 1) .bg-section-top {
+  height: 114px;
+  width: auto;
+  background-image: url("/images/bg-section-top-desktop-2.svg");
+  background-size: contain;
+}
+
+body .concept-section:nth-child(2n + 1) .bg-section-bottom {
+  height: 138px;
+  width: 100%;
+  background-image: url("/images/bg-section-bottom-desktop-1.svg");
+  background-size: contain;
+  position: absolute;
+  bottom: -136px;
+}
+
+body .concept-section .concept-content {
+  height: 300px;
+  width: 100%;
+}
+/*# sourceMappingURL=style.css.map */

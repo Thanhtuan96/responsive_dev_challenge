@@ -1,0 +1,39 @@
+@import url(./Header.css);
+@import url('https://fonts.googleapis.com/css2?family=Reenie+Beanie&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --text-color: #ffffff;
+    --bg-color: #14213d;
+    --dark-ellipse-color: #14213d;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    position: relative;
+    overflow: hidden;
+}
+.App {
+    text-align: center;
+    font-family: 'Reenie Beanie', cursive;
+}
+
+.navbar {
+    background-color: var(--bg-color);
+    z-index: 2;
+}
+.logo {
+    font-family: 'Reenie Beanie', cursive;
+}
+
+.hero-img {
+    background-color: var(--bg-color);
+}
+
+.avatar {
+    filter: drop-shadow(5px 5px 5px #222);
+}
