@@ -7,33 +7,50 @@
 }
 
 body {
-    .concept-section:nth-child(2n + 1) {
-        position: relative;
-        .concept-content {
-            height: 300px;
-            background-color: var(--neutral-very-pale-blue);
-            width: 100%;
-        }
-        .bg-section-top {
-            height: 114px;
-            width: auto;
-            background-image: url('/images/bg-section-top-desktop-2.svg');
-            background-size: contain;
-        }
-        .bg-section-bottom {
-            height: 138px;
-            width: 100%;
-            background-image: url('/images/bg-section-bottom-desktop-1.svg');
-            background-size: contain;
-            position: absolute;
-            bottom: -136px;
+    .concept-section:nth-child(2n) {
+        padding: 3em 2em;
+        .grow-section {
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content: center;
+            align-items: center;
+            img {
+                width: 50%;
+                height: 50%;
+            }
+            .grow-section_content {
+                padding-left: 46px;
+                padding-right: 0px;
+            }
         }
     }
-    .concept-section {
-        .concept-content {
-            height: 300px;
-
+    .concept-section:nth-child(2n + 1) {
+        img {
+            height: auto;
             width: 100%;
+            display: block;
         }
+        .concept-content {
+            height: 100%;
+            background-color: var(--neutral-very-pale-blue);
+            width: 100%;
+            .grow-section {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 3em 2em;
+                .grow-section_content {
+                    padding-right: 46px;
+                    padding-left: 0px;
+                }
+                img {
+                    width: 50%;
+                    height: 50%;
+                }
+            }
+        }
+    }
+    .footer {
+        background-color: black;
     }
 }
