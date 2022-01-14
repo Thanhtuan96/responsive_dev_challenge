@@ -7,6 +7,51 @@
 }
 
 body {
+    margin: 0;
+    padding: 0;
+    header {
+        nav {
+            padding: 1em 1em;
+            display: flex;
+            justify-content: space-between;
+            .cta-btn {
+                border: none;
+                color: var(--primary-light-pink);
+                border: 1px solid var(--primary-light-pink);
+                background-color: transparent;
+                padding: 0.2em 2.5em;
+                border-radius: 15px;
+            }
+        }
+        .hero {
+            height: 60vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            p {
+                width: 40%;
+                text-align: center;
+            }
+            .cta-btn {
+                color: white;
+                background-color: var(--primary-pink);
+                border: none;
+                padding: 1.5em 6em;
+                border-radius: 50px;
+            }
+        }
+    }
+    .body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        .screen-mockups {
+            width: 80%;
+            text-align: center;
+        }
+    }
     .concept-section:nth-child(2n) {
         padding: 3em 2em;
         .grow-section {
@@ -50,7 +95,43 @@ body {
             }
         }
     }
+
     .footer {
-        background-color: black;
+        color: white;
+        .footer-top-desktop {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        .footer-content {
+            display: flex;
+            padding: 2em 2em;
+            background-color: var(--neutral-very-dark-cyan);
+            .community-info {
+                flex: 1 1 0px;
+                .logo {
+                    img {
+                        width: 20px;
+                        height: 20px;
+                        display: inline;
+                    }
+                    p {
+                        display: inline;
+                    }
+                }
+                .contact-info {
+                    .info {
+                        display: flex;
+                        align-items: center;
+                        p {
+                            margin: 0;
+                        }
+                    }
+                }
+            }
+            .subscribe-section {
+                flex: 1 1 0px;
+            }
+        }
     }
 }
