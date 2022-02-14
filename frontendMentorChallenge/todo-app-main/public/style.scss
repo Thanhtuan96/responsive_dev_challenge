@@ -9,6 +9,11 @@ html[data-theme='dark'] {
     --btn-text-color: hsl(234, 11%, 52%);
     --btn-active-text-color: rgb(16, 127, 253);
     --todo-block-border-bottom: 0.5px solid rgba(218, 218, 218, 0.157);
+    --check-bg-color: radial-gradient(
+        circle,
+        rgba(63, 94, 251, 1) 0%,
+        rgba(252, 70, 107, 1) 100%
+    );
 }
 html[data-theme='light'] {
     --bg-top-desktop-img: url('./images/bg-desktop-light.jpg');
@@ -19,6 +24,12 @@ html[data-theme='light'] {
     --btn-text-color: hsl(234, 11%, 52%);
     --btn-active-text-color: rgb(16, 127, 253);
     --todo-block-border-bottom: 0.5px solid rgba(82, 78, 78, 0.103);
+    --check-bg-color: radial-gradient(
+        circle,
+        rgba(63, 94, 251, 1) 0%,
+        rgba(252, 70, 107, 1) 100%
+    );
+    --check-icon-img: url('./images/icon-check.svg');
 }
 
 * {
@@ -175,6 +186,11 @@ main {
                     margin-right: 2rem;
                 }
                 .check-complete::before {
+                    background: var(--check-icon-img);
+                    background-color: var(--check-bg-color);
+                    z-index: 2;
+                    background-size: cover;
+                    background-position: center;
                     content: '';
                     display: inline-block;
                     border-radius: 50%;
@@ -191,6 +207,8 @@ main {
                 .check-complete::after {
                     content: '';
                     display: inline-block;
+                    // background: var(--check-icon-img);
+                    // background: var(--check-bg-color);
                     border-radius: 50%;
                     outline: none;
                     cursor: pointer;

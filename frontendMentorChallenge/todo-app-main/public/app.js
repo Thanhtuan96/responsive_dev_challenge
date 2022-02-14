@@ -46,6 +46,7 @@ const checkAnyItem = () => {
     const list = JSON.parse(localStorage.getItem('tasks'));
     displayTodoItem(list);
     pannelCheck(list);
+    checkComplete();
 };
 
 //todo items count
@@ -69,7 +70,7 @@ const displayTodoItem = (list) => {
         todoContainer.style = 'display: block';
         let displayItem = '';
         list.forEach((item, key) => {
-            displayItem += `<div class="todo-block todo-line todo-task" data-id=${key}>
+            displayItem += `<div class="todo-block todo-line todo-task item task" data-id=${key} draggable='true'>
                     <input type="checkbox" class="check-complete">
                     <p class='task'>${item}</p>
                     <button class='delete-btn' ></button>
@@ -117,9 +118,17 @@ const checkComplete = () => {
     checkCompleteBtns.forEach((item) => {
         item.addEventListener('click', function () {
             item.nextElementSibling.classList.toggle('completed');
+
             if (item.nextElementSibling.classList.contains('completed')) {
-                item.style = `background: no-repeat url(images/icon-check.svg) center/60%, linear-gradient(to bottom, #57ddff, #c058f3);`;
-            } else item.style = `backgroudn: none`;
+                item.style.setProperty('--check-bg-color', 'rgb(63,94,251)');
+                item.style.setProperty(
+                    '--check-icon-img',
+                    "url('./images/icon-check.svg')"
+                );
+            } else {
+                item.style.setProperty('--check-bg-color', 'none');
+                item.style.setProperty('--check-icon-img', 'none');
+            }
         });
     });
 };
@@ -139,3 +148,57 @@ const todoApp = () => {
 };
 
 todoApp();
+
+const TODO_LIST = document.querySelector('.todo-container');
+
+let draggables = [];
+
+TODO_LIST.addEventListener('mousedown', function (e) {
+    if (
+        e.target.classList.contains('item') ||
+        e.target.classList.contains('task')
+    ) {
+        draggables = [...TODO_LIST.children];
+    }
+
+    draggables.forEach((draggable) => {
+        draggable.addEventListener('dragstart', () => {
+            draggable.classList.add('dragging');
+        });
+
+        draggable.addEventListener('dragend', () => {
+            draggable.classList.remove('dragging');
+        });
+    });
+});
+
+TODO_LIST.addEventListener('dragover', (e) => {
+    e.preventDefault();
+    const afterElement = getDragAfterElement(TODO_LIST, e.clientY);
+
+    const draggable = document.querySelector('.dragging');
+    if (afterElement == null) {
+        TODO_LIST.appendChild(draggable);
+    } else {
+        TODO_LIST.insertBefore(draggable, afterElement);
+    }
+});
+
+function getDragAfterElement(TODO_LIST, yPosition) {
+    const draggableElements = [
+        ...TODO_LIST.querySelectorAll('.item:not(.dragging)'),
+    ];
+
+    return draggableElements.reduce(
+        (closest, child) => {
+            const box = child.getBoundingClientRect();
+            const offset = yPosition - box.top - box.height / 2;
+            if (offset < 0 && offset > closest.offset) {
+                return { offset: offset, element: child };
+            } else {
+                return closest;
+            }
+        },
+        { offset: Number.NEGATIVE_INFINITY }
+    ).element;
+}

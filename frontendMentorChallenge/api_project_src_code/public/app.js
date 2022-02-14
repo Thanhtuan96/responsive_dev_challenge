@@ -8,20 +8,26 @@ mapboxgl.accessToken =
 document.addEventListener('DOMContentLoaded', () => {
     showResult.innerHTML = `<div class="result_id_address result">
                         <h3>ip address</h3>
-                        <span class="idAddress">1</span>
+                        <span class="idAddress">8.8.8.8</span>
                     </div>
                     <div class="result_location result">
                         <h3>location</h3>
-                        <span class="location">2</span>
+                        <span class="location">Mountain View, US</span>
                     </div>
                     <div class="result_timezone result">
                         <h3>timezone</h3>
-                        <span class="timezone">3</span>
+                        <span class="timezone">-08:00</span>
                     </div>
                     <div class="result_isp result">
                         <h3>isp</h3>
-                        <span class="isp">4</span>
+                        <span class="isp">Google LLC</span>
                     </div>`;
+    var map = new mapboxgl.Map({
+        container: 'map',
+        style: 'mapbox://styles/mapbox/streets-v11',
+        center: latlon,
+        zoom: 7,
+    });
 });
 
 searchBtn.addEventListener('click', () => {
